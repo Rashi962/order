@@ -8,6 +8,5 @@ import java.util.List;
 public interface OrderService {
 
     List<OrderDTO> getOrderHistory(int customerId);
-    Order addOrder(Order order);
 
 }

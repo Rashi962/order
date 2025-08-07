@@ -19,13 +19,19 @@ import java.util.Map;
 @Configuration
 public class KafkaConfig {
 
+    /*
+    Todo :
+     1. Make kafka config generic
+     2. Make kafka props configurable
+     3. Read about each kafka property and explain what they mean, make any improvement if needed
+     */
     @Bean
     public ConsumerFactory<String, CartCheckoutEvent> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
 
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "10.20.3.43:9092");
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "order-group");
-        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest"); // try changing it to latest and test once
 
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ErrorHandlingDeserializer.class);

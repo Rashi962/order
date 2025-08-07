@@ -1,7 +1,6 @@
 package com.example.order.controller;
 
 import com.example.order.dto.OrderDTO;
-import com.example.order.entity.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.order.service.OrderService;

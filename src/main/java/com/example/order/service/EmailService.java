@@ -1,7 +1,7 @@
 package com.example.order.service;
-
 import jakarta.mail.MessagingException;
 
 public interface EmailService {
-    void sendOrderConfirmationEmail(String to, String subject, String body) throws MessagingException;
+    void sendOrderConfirmation(String toEmail, String subject, String htmlBody) throws MessagingException;
+
 }

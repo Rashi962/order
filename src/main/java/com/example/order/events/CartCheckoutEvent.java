@@ -19,7 +19,6 @@ public class CartCheckoutEvent {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-
     public static class CartItemDto {
         private int productId;
         private String productName;
